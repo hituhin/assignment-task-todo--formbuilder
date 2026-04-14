@@ -1,3 +1,5 @@
+import styles from './Pagination.module.css';
+
 interface Props {
   currentPage: number;
   totalPages: number;
@@ -23,35 +25,29 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pr
   }
 
   return (
-    <div className="flex items-center justify-between flex-wrap gap-3 bg-white border border-gray-100 rounded-2xl px-5 py-3.5 shadow-sm">
-      <span className="text-sm text-gray-400">
-        Page <span className="font-semibold text-gray-600">{currentPage}</span> of{' '}
-        <span className="font-semibold text-gray-600">{totalPages}</span>
+    <div className={styles.wrapper}>
+      <span className={styles.info}>
+        Page <span className={styles.infoNum}>{currentPage}</span> of{' '}
+        <span className={styles.infoNum}>{totalPages}</span>
       </span>
 
-      <div className="flex items-center gap-1">
+      <div className={styles.controls}>
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="h-8 px-3 rounded-lg text-sm font-medium border border-gray-200 text-gray-500 hover:border-indigo-300 hover:text-indigo-600 disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
+          className={styles.btn}
         >
           ← Prev
         </button>
 
         {getPageNumbers().map((page, idx) =>
           page === '...' ? (
-            <span key={`e-${idx}`} className="w-8 text-center text-gray-300 text-sm select-none">
-              …
-            </span>
+            <span key={`e-${idx}`} className={styles.ellipsis}>…</span>
           ) : (
             <button
               key={page}
               onClick={() => onPageChange(page as number)}
-              className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors ${
-                page === currentPage
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'border border-gray-200 text-gray-600 hover:border-indigo-300 hover:text-indigo-600'
-              }`}
+              className={`${styles.pageBtn}${page === currentPage ? ` ${styles.pageBtnActive}` : ''}`}
             >
               {page}
             </button>
@@ -61,7 +57,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pr
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="h-8 px-3 rounded-lg text-sm font-medium border border-gray-200 text-gray-500 hover:border-indigo-300 hover:text-indigo-600 disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
+          className={styles.btn}
         >
           Next →
         </button>

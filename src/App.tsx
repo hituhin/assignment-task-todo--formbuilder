@@ -3,12 +3,13 @@ import Navbar from './components/layout/Navbar';
 import TodosPage from './pages/TodosPage/TodosPage';
 import FormBuilderPage from './pages/FormBuilderPage/FormBuilderPage';
 import FormPreviewPage from './pages/FormPreviewPage/FormPreviewPage';
+import styles from './App.module.css';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={styles.app}>
       <Navbar />
-      <main className="max-w-6xl mx-auto px-6 py-8">
+      <main className={styles.main}>
         <Routes>
           <Route path="/" element={<Navigate to="/todos" replace />} />
           <Route path="/todos" element={<TodosPage />} />

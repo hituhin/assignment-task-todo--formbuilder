@@ -14,9 +14,10 @@ interface FormBuilderState {
 const createField = (): FieldConfig => ({
   id: crypto.randomUUID(),
   label: '',
-  type: 'text' as FieldType,
+  type: '' as FieldType,
   options: [],
   required: false,
+  width: '1/2',
 });
 
 export const useFormBuilderStore = create<FormBuilderState>((set) => ({

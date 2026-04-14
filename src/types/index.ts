@@ -23,7 +23,8 @@ export interface EnrichedTodo extends Todo {
 export type StatusFilter = 'all' | 'completed' | 'pending';
 
 // ── Form builder ────────────────────────────────────────────
-export type FieldType = 'text' | 'email' | 'number' | 'textarea' | 'checkbox' | 'select';
+export type FieldType = 'text' | 'email' | 'number' | 'textarea' | 'checkbox' | 'select' | 'radio' | 'multi-radio';
+export type FieldWidth = '1/3' | '1/2' | 'full';
 
 export interface FieldConfig {
   id: string;
@@ -31,7 +32,8 @@ export interface FieldConfig {
   type: FieldType;
   options: string[];
   required: boolean;
+  width: FieldWidth;
 }
 
-export type FormValues = Record<string, string | boolean>;
+export type FormValues = Record<string, string | boolean | string[]>;
 export type FormErrors = Record<string, string>;

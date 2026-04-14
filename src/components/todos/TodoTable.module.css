@@ -1,0 +1,121 @@
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.wrapper {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  position: sticky;
+  z-index: 30;
+  background: #f9fafb;
+  box-shadow: 0 1px 0 0 #e5e7eb;
+  padding: 0.875rem 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.thFirst {
+  padding-left: 1.25rem;
+  padding-right: 0.5rem;
+  width: 2.5rem;
+  border-top-left-radius: 1rem;
+}
+
+.thLast {
+  padding-right: 1.25rem;
+  border-top-right-radius: 1rem;
+}
+
+.tbody tr + tr {
+  border-top: 1px solid #f9fafb;
+}
+
+.emptyCell {
+  padding: 4rem 0.75rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.errorCell {
+  padding: 4rem 0.75rem;
+  text-align: center;
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+.bigIcon {
+  font-size: 1.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skeleton rows */
+.skRow td {
+  padding: 1rem 0.75rem;
+}
+
+.skRow td:first-child {
+  padding-left: 1.25rem;
+  padding-right: 0.5rem;
+}
+
+.skRow td:last-child {
+  padding-right: 1.25rem;
+}
+
+.skBlock {
+  height: 0.75rem;
+  border-radius: 0.25rem;
+  background: #f3f4f6;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skBlockNarrow {
+  width: 1.5rem;
+}
+
+.skBadge {
+  height: 1.5rem;
+  width: 6rem;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skUser {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skAvatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  flex-shrink: 0;
+}
+
+.skName {
+  height: 0.75rem;
+  width: 7rem;
+  border-radius: 0.25rem;
+  background: #f3f4f6;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

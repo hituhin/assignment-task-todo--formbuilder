@@ -1,0 +1,92 @@
+.wrapper {
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #e0e7ff;
+}
+
+.title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.375rem 0.125rem 0.625rem;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #4338ca;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.pillRemove {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  color: #6366f1;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.pillRemove:hover {
+  background: #c7d2fe;
+}
+
+.addRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.addInput {
+  flex: 1;
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  outline: none;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+
+.addInput:focus {
+  box-shadow: 0 0 0 2px #818cf8;
+  background: #ffffff;
+}
+
+.addBtn {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.addBtn:hover {
+  background: #4338ca;
+}
